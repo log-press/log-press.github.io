@@ -1,15 +1,9 @@
 ---
 layout: post
-title: "About"
-author: "Chester"
+title: "About Log-Press"
+author: "슬찬"
 permalink: /about/
 ---
 
-A friend of mine writes short stories. One sunny day, I asked if he wanted a website to showcase his works and he agreed. I decided to use GitHub Pages to host his site. That way he wouldn't have to buy a domain and a server.
-
-While doing some research up on GitHub Pages, I accidentally chanced upon this _simple, blog-aware, static site generator_ called [Jekyll](https://jekyllrb.com/) which works really well with GitHub Pages. I figured it would do just fine for my friend and I set about searching for a pretty theme. I wanted a theme with a _book-ish_ vibe. Unfortunately, most of the themes were too modern. Eventually, I caved and begun working on my own theme. With the help of [Poole](https://github.com/poole/poole), the Jekyll Butler, I was able to build **Tale**.
-
-## Contribute
-Feel free to create an issue or make a pull request on [GitHub](https://github.com/chesterhow/tale).
-
-Thanks for reading!
+사적인 글(Log)과 공적인 글(Press)을 보관한다는 의미를 담고 있습니다.
+통나무 모양의 기구를 머리 위로 들어올리는 스트롱맨 리프트 종목의 이름이기도 합니다.
