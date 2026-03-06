@@ -4,50 +4,76 @@ title: "Tags"
 permalink: /tags/
 ---
 
+{%- comment -%} 1. 태그 정렬 로직 (최신 포스트 날짜 기준) {%- endcomment -%}
+{%- assign tag_raw_list = "" -%}
+{%- for tag in site.tags -%}
+  {%- comment -%} 해당 태그의 최신 포스트 날짜 추출 {%- endcomment -%}
+  {%- assign latest_post = tag[1] | sort: "date" | last -%}
+  {%- assign date_stamp = latest_post.date | date: "%Y%m%d%H%M%S" -%}
+  {%- comment -%} '날짜:::태그이름' 형태로 문자열 생성 {%- endcomment -%}
+  {%- assign tag_raw_list = tag_raw_list | append: date_stamp | append: ":::" | append: tag[0] | append: "|" -%}
+{%- endfor -%}
+
+{%- comment -%} 2. 생성된 문자열을 날짜 숫자로 정렬 후 내림차순(최신순) 뒤집기 {%- endcomment -%}
+{%- assign sorted_tags = tag_raw_list | split: "|" | sort | reverse -%}
+
 <div class="tags">
   <div class="tags-header">
     <h2 class="tags-header-title">{{ page.title }}</h2>
     <div class="tags-header-line"></div>
   </div>
+
+  {%- comment -%} 상단 태그 클라우드 영역 (정렬 적용 및 개수 표시) {%- endcomment -%}
   <div class="tags-clouds">
-    {% for tag in site.tags %}
-    <a href="#{{ tag[0] }}">{{ tag[0] }}</a>
+    {% for item in sorted_tags %}
+      {% assign t_name = item | split: ":::" | last %}
+      {% assign t_count = site.tags[t_name] | size %}
+      <a href="#{{ t_name }}">{{ t_name }} <sup>{{ t_count }}</sup></a>
     {% endfor %}
   </div>
-  {% for tag in site.tags %}
-  <div class="tags-item" id="{{ tag[0] }}">
-    <svg
-      class="tags-item-icon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-tag"
-    >
-      <path
-        d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      ></path>
-      <line x1="7" y1="7" x2="7.01" y2="7"></line>
-    </svg>
-    <h2 class="tags-item-label">{{ tag[0] }}</h2>
-    {% for post in tag[1] %}
-    <a class="tags-post" href="{{ post.url | prepend: site.baseurl }}">
-      <div>
-        <span class="tags-post-title">{{ post.title }}</span>
-        <div class="tags-post-line"></div>
-      </div>
-      <span class="tags-post-meta">
-        <time datetime="{{ post.date }}">
-          {{ post.date | date:"%Y-%m-%d" }}
-        </time>
-      </span>
-    </a>
-    {% endfor %}
-  </div>
+
+  {%- comment -%} 하단 태그별 포스트 목록 영역 {%- endcomment -%}
+  {% for item in sorted_tags %}
+    {% assign t_name = item | split: ":::" | last %}
+    {% assign t_posts = site.tags[t_name] %}
+    {% assign t_count = t_posts | size %}
+
+    <div class="tags-item" id="{{ t_name }}">
+      <svg
+        class="tags-item-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-tag"
+      >
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      <h2 class="tags-item-label">
+        {{ t_name }} <span class="tags-count">({{ t_count }})</span>
+      </h2>
+
+      {%- comment -%} 개별 태그 내 포스트도 최신순 정렬 {%- endcomment -%}
+      {% assign posts_sorted = t_posts | sort: "date" | reverse %}
+      {% for post in posts_sorted %}
+      <a class="tags-post" href="{{ post.url | prepend: site.baseurl }}">
+        <div>
+          <span class="tags-post-title">{{ post.title }}</span>
+          <div class="tags-post-line"></div>
+        </div>
+        <span class="tags-post-meta">
+          <time datetime="{{ post.date }}">
+            {{ post.date | date:"%Y-%m-%d" }}
+          </time>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
   {% endfor %}
 </div>
