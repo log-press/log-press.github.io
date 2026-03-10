@@ -1,0 +1,49 @@
+:root {
+  /* 라이트 모드: 브랜드 색상 검정 */
+  --vp-c-brand-1: #000000;
+  --vp-c-brand-2: #222222;
+  --vp-c-brand-3: #444444;
+  --vp-c-brand-soft: rgba(0, 0, 0, 0.05);
+  --vp-button-brand-text: #ffffff; /* 검정 버튼 위 흰색 글자 */
+}
+
+.dark {
+  /* 다크 모드: 브랜드 색상 흰색 */
+  --vp-c-brand-1: #ffffff;
+  --vp-c-brand-2: #eeeeee;
+  --vp-c-brand-3: #dddddd;
+  --vp-c-brand-soft: rgba(255, 255, 255, 0.1);
+  --vp-button-brand-text: #000000; /* 흰색 버튼 위 검정 글자 */
+}
+
+/* 본문 내 모든 헤더 위 구분선 제거 */
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  border-top: none !important;
+  margin-top: 2.4rem !important; /* 상단 여백이 너무 붙어 보일 경우 수치 조정 */
+  padding-top: 0 !important;
+}
+
+/* 목차(aside)가 본문 중앙 정렬을 밀어내지 않도록 절대 위치로 강제 조정 (PC 화면 기준) */
+@media (min-width: 1280px) {
+  .VPDoc .container {
+    position: relative !important;
+    justify-content: center !important;
+  }
+  
+  .VPDoc .aside {
+    position: absolute !important;
+    top: 0;
+    /* 본문 중앙을 기준으로 우측으로 380px 띄웁니다. 
+       본문과 목차 사이의 간격을 조절하려면 380px 수치를 변경하십시오. */
+    left: calc(50% + 380px) !important; 
+    width: 250px;
+  }
+  
+  .VPDoc .content {
+    margin: 0 auto !important;
+  }
+}
