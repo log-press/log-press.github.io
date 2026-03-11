@@ -13,7 +13,7 @@ export default defineConfig({
       {
         text: 'Posts',
         items: [
-          { text: '학부 리포트', link: '/posts/univ-reports/' }
+          { text: '학부 리포트', link: '/posts/univ-reports/' },
           { text: '일기', link: '/posts/diary/' }
         ]
       },
