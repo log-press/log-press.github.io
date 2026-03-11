@@ -14,19 +14,11 @@ export default defineConfig({
         text: 'Posts',
         items: [
           { text: '학부 리포트', link: '/posts/univ-reports/' }
+          { text: '일기', link: '/posts/diary/' }
         ]
       },
       { text: 'Tags', link: '/tags' },
       { text: 'About', link: '/about' }
-    ],
-
-    sidebar: [
-      {
-        text: '카테고리 목록',
-        items: [
-          { text: '학부 리포트', link: '/posts/univ-reports/' }
-        ]
-      }
     ],
 
     docFooter: {
