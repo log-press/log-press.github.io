@@ -191,8 +191,6 @@ Pierce, David. “The Rabbit R1 Is an AI-Powered Gadget That Can Use Your Apps f
 
 rabbit. “Introducing R1, a Pocket Companion That Moves Ai from Words to Action.” Rabbit, 9 Jan. 2024, www.rabbit.tech/newsroom/introducing-r1.
 
-Business Wire. "rabbit inc. Raises Additional $10M to Launch First AI Hardware to Replace App-based Operating Systems." Business Wire, 21 Dec. 2023, www.businesswire.com/news/home/20231221005054/en/rabbit-inc-Raises-Additional-$10M-to-Launch-First-AI-Hardware-to-Replace-App-based-Operating-Systems. Accessed 13 June 2024.
-
 "Rabbit r1 release date, price, features, and everything you need to know." TechRadar, 9 Jan. 2024, www.techradar.com/news/rabbit-r1-release-date-price-features-and-everything-you-need-to-know. Accessed 13 June 2024.
 
 "rabbit - rabbit os." Rabbit.tech, 2024, [www.rabbit.tech/rabbit-os](http://www.rabbit.tech/rabbit-os). Accessed 15 June 2024.
