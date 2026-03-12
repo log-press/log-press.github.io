@@ -7,7 +7,7 @@ aside: false
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { data as allPosts } from '../posts.data.mts'
 
-const categoryPosts = allPosts.filter(p => p.url.includes('/diary/'))
+const categoryPosts = allPosts.filter(p => p.url.includes('/thoughts/'))
 
 const postsPerPage = 10
 const currentPage = ref(1)
@@ -70,10 +70,10 @@ onUnmounted(() => {
 })
 </script>
 
-<h1 style="text-align: center; margin-bottom: 24px; font-size: 2.4rem;">일기</h1>
+<h1 style="text-align: center; margin-bottom: 24px; font-size: 2.4rem;">짧은 생각</h1>
 
 <p style="color: var(--vp-c-text-2); text-align: center; font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6;">
-  매일은 아니고 쓰고 싶을 때 쓰지요.
+  사는데 별 도움은 안 되는, 그냥 스치는 아이디어를 적습니다.
 </p>
 
 ---

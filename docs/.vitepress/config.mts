@@ -13,8 +13,16 @@ export default defineConfig({
       {
         text: 'Posts',
         items: [
+          { text: '좋은 글', link: '/posts/collection/' },
+          { text: '평론', link: '/posts/column/' },
+          { text: '일기', link: '/posts/diary/' },
+          { text: '수필', link: '/posts/essay/' },
+          { text: '회상', link: '/posts/memoir/' },
+          { text: '뉴스 스크랩', link: '/posts/news/' },
+          { text: '리뷰', link: '/posts/review/' },
+          { text: '짧은 생각', link: '/posts/thoughts/' },
           { text: '학부 리포트', link: '/posts/univ-reports/' },
-          { text: '일기', link: '/posts/diary/' }
+          { text: '알아보기', link: '/posts/wiki/' },
         ]
       },
       { text: 'Tags', link: '/tags' },

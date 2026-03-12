@@ -73,7 +73,7 @@ onUnmounted(() => {
 <h1 style="text-align: center; margin-bottom: 24px; font-size: 2.4rem;">학부 리포트</h1>
 
 <p style="color: var(--vp-c-text-2); text-align: center; font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6;">
-  학부생 시절 작성한 리포트와 에세이를 모았습니다. <br> 깊이는 없고 허세는 과합니다. <br> 그래도 글마다 그때가 생각나 남겨둡니다.
+  학부생 시절 작성한 리포트와 에세이를 모았습니다.
 </p>
 
 ---
