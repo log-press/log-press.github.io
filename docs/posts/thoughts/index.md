@@ -7,7 +7,7 @@ aside: false
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { data as allPosts } from '../posts.data.mts'
 
-const categoryPosts = allPosts.filter(p => p.url.includes('/univ-reports/'))
+const categoryPosts = allPosts.filter(p => p.url.includes('/thoughts/'))
 
 const postsPerPage = 10
 const currentPage = ref(1)
