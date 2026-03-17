@@ -93,7 +93,7 @@ const getNavButtonStyle = (isDisabled) => ({
 })
 </script>
 
-<h1 style="text-align: center; margin-bottom: 24px; font-size: 2.4rem;">위키</h1>
+<h1 style="text-align: center; margin-bottom: 24px; font-size: 2.4rem;">알아보기</h1>
 
 <p style="color: var(--vp-c-text-2); text-align: center; font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6;">
   정보글은 개추.
