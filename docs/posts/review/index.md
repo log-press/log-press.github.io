@@ -7,17 +7,20 @@ aside: false
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { data as allPosts } from '../posts.data.mts'
 
-const categoryPosts = allPosts.filter(p => p.url.includes('/review/'))
+const categoryPosts = allPosts.filter(p => p.url.includes('/univ-reports/'))
 
 const postsPerPage = 10
 const currentPage = ref(1)
+const maxVisiblePages = 5
 
 const totalPages = computed(() => Math.ceil(categoryPosts.length / postsPerPage))
 
-// 페이지 번호 배열 생성
 const pageNumbers = computed(() => {
   const pages = []
-  for (let i = 1; i <= totalPages.value; i++) {
+  const startPage = Math.floor((currentPage.value - 1) / maxVisiblePages) * maxVisiblePages + 1
+  const endPage = Math.min(startPage + maxVisiblePages - 1, totalPages.value)
+  
+  for (let i = startPage; i <= endPage; i++) {
     pages.push(i)
   }
   return pages
@@ -35,8 +38,9 @@ const formatDate = (dateString) => {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-// URL을 변경하고 상태를 업데이트하는 함수
 const changePage = (page) => {
+  if (page < 1 || page > totalPages.value) return 
+  
   currentPage.value = page
   if (typeof window !== 'undefined') {
     const url = new URL(window.location)
@@ -46,10 +50,10 @@ const changePage = (page) => {
       url.searchParams.set('page', page)
     }
     window.history.pushState({}, '', url)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
 
-// 브라우저 뒤로가기/앞으로가기 감지 시 URL에서 페이지 번호를 읽어오는 함수
 const handlePopState = () => {
   if (typeof window !== 'undefined') {
     const params = new URLSearchParams(window.location.search)
@@ -58,15 +62,34 @@ const handlePopState = () => {
   }
 }
 
-// 컴포넌트 마운트 시 URL 확인 및 이벤트 리스너 등록
 onMounted(() => {
   handlePopState()
   window.addEventListener('popstate', handlePopState)
 })
 
-// 컴포넌트 언마운트 시 이벤트 리스너 제거
 onUnmounted(() => {
   window.removeEventListener('popstate', handlePopState)
+})
+
+// 마크다운 파싱 오류 방지를 위한 스타일 객체 분리
+const getButtonStyle = (page) => ({
+  padding: '6px 12px',
+  border: '1px solid var(--vp-c-divider)',
+  borderRadius: '4px',
+  background: currentPage.value === page ? 'var(--vp-c-brand-1)' : 'transparent',
+  color: currentPage.value === page ? 'var(--vp-button-brand-text)' : 'var(--vp-c-text-1)',
+  cursor: 'pointer',
+  fontWeight: currentPage.value === page ? 'bold' : 'normal'
+})
+
+const getNavButtonStyle = (isDisabled) => ({
+  padding: '6px 12px',
+  border: '1px solid var(--vp-c-divider)',
+  borderRadius: '4px',
+  background: 'transparent',
+  color: 'var(--vp-c-text-1)',
+  opacity: isDisabled ? 0.5 : 1,
+  cursor: isDisabled ? 'not-allowed' : 'pointer'
 })
 </script>
 
@@ -102,22 +125,16 @@ onUnmounted(() => {
   <hr style="margin: 24px 0; border-color: var(--vp-c-divider);">
 </div>
 
-<div v-if="totalPages > 1" style="display: flex; justify-content: center; gap: 8px; margin-top: 40px;">
-  <button 
-    v-for="page in pageNumbers" 
-    :key="page"
-    @click="changePage(page)"
-    :style="{
-      padding: '6px 12px',
-      border: '1px solid var(--vp-c-divider)',
-      borderRadius: '4px',
-      background: currentPage === page ? 'var(--vp-c-brand-1)' : 'transparent',
-      /* custom.css에 정의된 테마별 대비 색상 변수를 사용하여 가독성을 확보합니다 */
-      color: currentPage === page ? 'var(--vp-button-brand-text)' : 'var(--vp-c-text-1)',
-      cursor: 'pointer',
-      fontWeight: currentPage === page ? 'bold' : 'normal'
-    }"
-  >
+<div v-if="totalPages > 1" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 40px;">
+  <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1" :style="getNavButtonStyle(currentPage === 1)">
+    {{ '<' }}
+  </button>
+
+  <button v-for="page in pageNumbers" :key="page" @click="changePage(page)" :style="getButtonStyle(page)">
     {{ page }}
+  </button>
+
+  <button @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages" :style="getNavButtonStyle(currentPage === totalPages)">
+    {{ '>' }}
   </button>
 </div>
