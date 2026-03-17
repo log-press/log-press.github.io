@@ -95,7 +95,7 @@ const getNavButtonStyle = (isDisabled) => ({
 
 <h1 style="text-align: center; margin-bottom: 24px; font-size: 2.4rem;">뉴스 스크랩</h1>
 
-<p style="color: var(--vp-c-text-2); text-align: center; font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6;">
+<p style="color: var(--vp-c-text-2); text-align: center; font-size: 1.1rem; margin-bottom: 32px; line-height: 1.6;">
   가정이 무너지고 사회가 무너지고.
 </p>
 
@@ -106,7 +106,7 @@ const getNavButtonStyle = (isDisabled) => ({
     {{ formatDate(post.date) }}
   </span>
   
-  <h2 style="border: none !important; margin-top: 8px !important; margin-bottom: 8px !important; padding: 0 !important; line-height: 1.2;">
+  <h2 style="border: none !important; margin-top: 8px !important; margin-bottom: 8px !important; padding: 0 !important; line-height: 1.2; font-size: 1.2rem">
     <a :href="post.url" style="color: var(--vp-c-text-1); text-decoration: none; font-weight: bold;">
       {{ post.title }}
     </a>
@@ -118,7 +118,7 @@ const getNavButtonStyle = (isDisabled) => ({
     </span>
   </div>
   
-  <p style="color: var(--vp-c-text-2); line-height: 1.6;">
+  <p style="color: var(--vp-c-text-2); line-height: 1.6; font-size: 0.9rem">
     {{ post.preview }}
   </p>
   
