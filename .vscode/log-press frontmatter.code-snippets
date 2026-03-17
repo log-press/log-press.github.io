@@ -12,5 +12,10 @@
       "$0"
     ],
     "description": "마크다운 YAML 프론트매터 템플릿"
+  },
+  "Clean Markdown Link": {
+    "prefix": "link",
+    "body": "[${1:text}](${2})",
+    "description": "Insert a markdown link without https://"
   }
 }
