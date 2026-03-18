@@ -27,6 +27,24 @@
   padding-top: 0 !important;
 }
 
+/* 마크다운 본문(단락, 리스트, 표, 인용구) 내의 텍스트 링크만 디자인 변경 */
+.vp-doc p a,
+.vp-doc li a,
+.vp-doc table a,
+.vp-doc blockquote a {
+  color: #42b883 !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+.vp-doc p a:hover,
+.vp-doc li a:hover,
+.vp-doc table a:hover,
+.vp-doc blockquote a:hover {
+  color: #33a06f !important;
+}
+
 /* 목차(aside)가 본문 중앙 정렬을 밀어내지 않도록 절대 위치로 강제 조정 (PC 화면 기준) */
 @media (min-width: 1280px) {
   .VPDoc .container {

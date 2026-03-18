@@ -93,35 +93,28 @@ const getNavButtonStyle = (isDisabled) => ({
 })
 </script>
 
-<h1 style="text-align: center; margin-bottom: 24px; font-size: 2.4rem;">알아보기</h1>
+<h1 style="text-align: center; margin-top: 32px; margin-bottom: 24px; font-size: 2rem;">알아보기</h1>
 
-<p style="color: var(--vp-c-text-2); text-align: center; font-size: 1.1rem; margin-bottom: 32px; line-height: 1.6;">
-  정보글은 개추.
+<p style="color: var(--vp-c-text-2); text-align: center; font-size: 1rem; margin-bottom: 60px; line-height: 1.6;">
+  정보글은 개추
 </p>
 
 ---
 
 <div v-for="post in paginatedPosts" :key="post.url" style="margin-top: 24px;">
-  <span style="display: block; color: var(--vp-c-text-2); font-size: 0.9rem; margin-bottom: 0;">
-    {{ formatDate(post.date) }}
-  </span>
-  
-  <h2 style="border: none !important; margin-top: 8px !important; margin-bottom: 8px !important; padding: 0 !important; line-height: 1.2; font-size: 1.2rem">
-    <a :href="post.url" style="color: var(--vp-c-text-1); text-decoration: none; font-weight: bold;">
+  <a :href="post.url" style="display: block; text-decoration: none; cursor: pointer;">
+    <h2 style="border: none !important; margin-top: 8px !important; margin-bottom: 8px !important; padding: 0 !important; line-height: 1.2; font-size: 1.4rem; color: var(--vp-c-text-1); font-weight: 600;">
       {{ post.title }}
-    </a>
-  </h2>
-
-  <div v-if="post.tags && post.tags.length" style="display: flex; gap: 8px; margin-bottom: 12px;">
-    <span v-for="tag in post.tags" :key="tag" style="font-size: 0.85rem; color: var(--vp-c-brand-1); font-weight: 500;">
-      #{{ tag }}
-    </span>
-  </div>
-  
-  <p style="color: var(--vp-c-text-2); line-height: 1.6; font-size: 0.9rem">
-    {{ post.preview }}
-  </p>
-  
+    </h2>
+    <div v-if="post.tags && post.tags.length" style="display: flex; gap: 8px; margin-bottom: 12px;">
+      <span v-for="tag in post.tags" :key="tag" style="font-size: 0.85rem; color: var(--vp-c-brand-1); font-weight: 500;">
+        #{{ tag }}
+      </span>
+    </div>
+    <p style="color: var(--vp-c-text-2); line-height: 1.6; font-size: 0.9rem; margin: 0;">
+      {{ post.preview }}
+    </p>
+  </a>
   <hr style="margin: 24px 0; border-color: var(--vp-c-divider);">
 </div>
 

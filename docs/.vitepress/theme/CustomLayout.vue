@@ -21,7 +21,7 @@ const formatDate = (d) => {
   <Layout>
     <template #doc-before>
       <div v-if="isPost" style="text-align: center; margin-bottom: 60px;">
-        <h1 style="font-size: 2.4rem; font-weight: bold; border: none; margin-top: 32px; margin-bottom: 24px; color: var(--vp-c-text-1); line-height: 1.4;">
+        <h1 style="font-size: 2rem; font-weight: 600; border: none; margin-top: 32px; margin-bottom: 24px; color: var(--vp-c-text-1); line-height: 1.4; word-break: keep-all">
           {{ frontmatter.title }}
         </h1>
         
@@ -30,10 +30,10 @@ const formatDate = (d) => {
         </p>
 
         <div v-if="frontmatter.tags && frontmatter.tags.length" style="display: flex; justify-content: center; gap: 8px; margin-top: 24px;">
-          <span v-for="tag in frontmatter.tags" :key="tag" 
-                style="background: var(--vp-c-bg-soft); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; color: var(--vp-c-brand-1); font-weight: 500;">
+          <a v-for="tag in frontmatter.tags" :key="tag" :href="'/tags.html#' + tag"
+                style="background: var(--vp-c-bg-soft); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; color: var(--vp-c-brand-1); font-weight: 500; text-decoration: none; cursor: pointer;">
             #{{ tag }}
-          </span>
+          </a>
         </div>
 
         <hr style="margin-top: 60px; border: none; border-top: 1px solid var(--vp-c-divider);">

@@ -9,7 +9,17 @@ export default createContentLoader('posts/**/*.md', {
       .map((page) => {
         // 프론트매터 제거 및 본문 텍스트 추출
         let cleanContent = page.src ? page.src.replace(/^---[\s\S]+?---\s*/, '') : ''
-        cleanContent = cleanContent.replace(/#+\s/g, '').replace(/\n/g, ' ').trim()
+        
+        // 마크다운 특수기호 정규식(Regex) 처리
+        cleanContent = cleanContent
+          .replace(/!\[.*?\]\(.*?\)/g, '') // 1. 이미지는 아예 제거
+          .replace(/\[(.*?)\]\(.*?\)/g, '$1') // 2. 링크는 주소 지우고 텍스트만 남김 ([텍스트](주소) -> 텍스트)
+          .replace(/[`~*_]+/g, '') // 3. 굵게, 기울임, 취소선, 인라인 코드 기호 등 제거
+          .replace(/#+\s/g, '') // 4. 헤더 기호(#) 제거
+          .replace(/>\s/g, '') // 5. 인용문 기호(>) 제거
+          .replace(/<\/?[^>]+(>|$)/g, '') // 6. 혹시 섞여 있을 HTML 태그 제거
+          .replace(/\s+/g, ' ') // 7. 여러 줄바꿈과 탭, 연속된 공백을 띄어쓰기 하나로 통일
+          .trim()
 
         return {
           title: page.frontmatter.title || '제목 없음',
