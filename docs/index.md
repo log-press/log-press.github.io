@@ -34,7 +34,7 @@ const scrollToRecent = () => {
 
 <div id="recent-posts" style="max-width: 600px; margin: 100px auto 200px; padding: 100px 24px 0 24px;">
   <h2 style="font-size: 1.4rem; text-align: center; border-bottom: 2px solid var(--vp-c-divider); padding-bottom: 14px; margin-bottom: 24px;">
-    recent posts
+    Recent posts
   </h2>
 
   <div v-for="post in recentPosts" :key="post.url" style="margin-bottom: 12px; text-align: center;">
