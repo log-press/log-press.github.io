@@ -13,9 +13,34 @@
     ],
     "description": "마크다운 YAML 프론트매터 템플릿"
   },
+
   "Clean Markdown Link": {
     "prefix": "link",
     "body": "[${1:text}](${2})",
     "description": "Insert a markdown link without https://"
+  },
+  
+  "News Scrap Template": {
+    "prefix": "news",
+    "body": [
+      "---",
+      "title: N$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE",
+      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "tags: [뉴스스크랩]",
+      "---",
+      "",
+      "## 정치",
+      "",
+      "$1",
+      "",
+      "## 사회",
+      "",
+      "## 경제",
+      "",
+      "## 국제",
+      "",
+      "## 테크"
+    ],
+    "description": "뉴스 스크랩용 프론트매터 및 헤딩 템플릿"
   }
 }
