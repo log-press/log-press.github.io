@@ -23,9 +23,13 @@ aside: false
   <p style="margin-bottom: 24px;">
     근데 꾸준히 글 쓰는 게 힘들긴 더 힘들 것 같습니다. 여기에 글 한 편 쓸 때마다 통나무 한 번씩 들어올린다는 마음가짐으로 써봐야겠습니다.
   </p>
+</div>
 
-  <h2 style="border: none !important; margin-top: 48px !important; margin-bottom: 16px !important; padding: 0 !important;">Contact</h2>
-  <p>
-    이메일: tmfcks0215@gmail.com
+<div style="max-width: 600px; margin: 200px auto 0px; padding: 0 24px;">
+  <h2 style="font-size: 1.4rem; text-align: center; border-bottom: 2px solid var(--vp-c-divider) !important; padding-bottom: 14px !important; margin-bottom: 24px !important;">
+    Contact
+  </h2>
+  <p style="text-align: center; font-size: 1.1rem; color: var(--vp-c-text-2); margin: 0;">
+    tmfcks0215@gmail.com
   </p>
 </div>
