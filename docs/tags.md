@@ -26,10 +26,9 @@ const tagGroups = computed(() => {
     });
     return {
       tag: tag,
-      posts: sortedPosts,
-      latestDate: sortedPosts.length > 0 ? new Date(sortedPosts[0].date || 0).getTime() : 0
+      posts: sortedPosts
     };
-  }).sort((a, b) => b.latestDate - a.latestDate);
+  }).sort((a, b) => a.tag.localeCompare(b.tag));
 });
 
 const formatDate = (dateString) => {
