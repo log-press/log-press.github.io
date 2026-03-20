@@ -26,7 +26,7 @@
       "---",
       "title: N$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE",
       "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
-      "tags: [뉴스스크랩]",
+      "tags: []",
       "---",
       "",
       "$1",
@@ -42,5 +42,12 @@
       "## 테크"
     ],
     "description": "뉴스 스크랩용 프론트매터 및 헤딩 템플릿"
+  },
+
+  "Line Break": {
+    "prefix": "line",
+    "body": [
+      "<br>"
+    ]
   }
 }
