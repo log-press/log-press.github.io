@@ -16,7 +16,7 @@
 
   "Clean Markdown Link": {
     "prefix": "link",
-    "body": "[${1:text}](${2})",
+    "body": "[${1}](${2})",
     "description": "Insert a markdown link without https://"
   },
   
@@ -26,7 +26,7 @@
       "---",
       "title: N$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE",
       "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
-      "tags: []",
+      "tags: [뉴스]",
       "---",
       "",
       "$1",
@@ -61,5 +61,5 @@
       "$0"
     ],
     "description": "가운데 정렬 및 캡션 포함 이미지 삽입"
-  }
+  },
 }
