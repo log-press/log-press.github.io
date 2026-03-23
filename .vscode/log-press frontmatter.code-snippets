@@ -1,6 +1,6 @@
 {
   "Markdown Frontmatter": {
-    "prefix": "fm",
+    "prefix": "f",
     "scope": "markdown",
     "body": [
       "---",
@@ -15,13 +15,13 @@
   },
 
   "Clean Markdown Link": {
-    "prefix": "link",
-    "body": "[${1}](${2})",
+    "prefix": "k",
+    "body": "[${1}](${2})$0",
     "description": "Insert a markdown link without https://"
   },
   
   "News Scrap Template": {
-    "prefix": "news",
+    "prefix": "n",
     "body": [
       "---",
       "title: N$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE",
@@ -43,14 +43,14 @@
   },
 
   "Line Break": {
-    "prefix": "line",
+    "prefix": "b",
     "body": [
       "<br>"
     ]
   },
 
   "Centered Image": {
-    "prefix": "image",
+    "prefix": "g",
     "body": [
       "<div style=\"text-align: center; margin: 40px 0;\">",
       "  <img src=\"../../public/${1:filename}.${2:extension}\" alt=\"${3:caption}\" width=\"${4:500}\" style=\"display: block; margin: 0 auto 12px;\">",
