@@ -93,10 +93,10 @@ const getNavButtonStyle = (isDisabled) => ({
 })
 </script>
 
-<h1 style="text-align: center; margin-top: 32px; margin-bottom: 24px; font-size: 2rem;">일기</h1>
+<h1 style="text-align: center; margin-top: 32px; margin-bottom: 24px; font-size: 2rem;">Diary</h1>
 
 <p style="color: var(--vp-c-text-2); text-align: center; font-size: 1rem; margin-bottom: 60px; line-height: 1.6;">
-  매일은 아니고 쓰고 싶을 때만
+  매일은 아니고 쓰고 싶을 때
 </p>
 
 ---

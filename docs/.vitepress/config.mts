@@ -13,16 +13,10 @@ export default defineConfig({
       {
         text: 'Posts',
         items: [
-          { text: '채록', link: '/posts/collection/' },
-          { text: '평론', link: '/posts/column/' },
-          { text: '일기', link: '/posts/diary/' },
-          { text: '만록', link: '/posts/essay/' },
-          { text: '회상', link: '/posts/memoir/' },
-          { text: '뉴스', link: '/posts/news/' },
-          { text: '리뷰', link: '/posts/review/' },
-          { text: '단상', link: '/posts/thoughts/' },
-          { text: '학부', link: '/posts/univ-reports/' },
-          { text: '위키', link: '/posts/wiki/' },
+          { text: 'News', link: '/posts/news/' },
+          { text: 'Clips', link: '/posts/clips/' },
+          { text: 'Diary', link: '/posts/diary/' },
+          { text: 'Miscellany', link: '/posts/miscellany/' },
         ]
       },
       { text: 'Tags', link: '/tags' },

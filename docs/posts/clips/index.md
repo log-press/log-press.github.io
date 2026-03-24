@@ -7,7 +7,7 @@ aside: false
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { data as allPosts } from '../posts.data.mts'
 
-const categoryPosts = allPosts.filter(p => p.url.includes('/review/'))
+const categoryPosts = allPosts.filter(p => p.url.includes('/clips/'))
 
 const postsPerPage = 10
 const currentPage = ref(1)
@@ -93,10 +93,10 @@ const getNavButtonStyle = (isDisabled) => ({
 })
 </script>
 
-<h1 style="text-align: center; margin-top: 32px; margin-bottom: 24px; font-size: 2rem;">리뷰</h1>
+<h1 style="text-align: center; margin-top: 32px; margin-bottom: 24px; font-size: 2rem;">Clips</h1>
 
 <p style="color: var(--vp-c-text-2); text-align: center; font-size: 1rem; margin-bottom: 60px; line-height: 1.6;">
-  영화, 책, 음악, 이것저것
+  남의 글 모음
 </p>
 
 ---

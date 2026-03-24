@@ -24,9 +24,8 @@
     "prefix": "news",
     "body": [
       "---",
-      "title: N$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE",
-      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
-      "tags: [뉴스]",
+      "title: $CURRENT_YEAR_SHORT$CURRENT_MONTH$CURRENT_DATE",
+      "tags: [뉴스클리핑]",
       "---",
       "",
       "## 정치",
@@ -39,7 +38,7 @@
       "",
       "## 테크"
     ],
-    "description": "뉴스 스크랩용 프론트매터 및 헤딩 템플릿"
+    "description": "뉴스클리핑용 프론트매터 및 헤딩 템플릿"
   },
 
   "Line Break": {
@@ -59,5 +58,13 @@
       "$0"
     ],
     "description": "가운데 정렬 및 캡션 포함 이미지 삽입"
+  },
+
+  "Underline Text": {
+    "prefix": "underline",
+    "body": [
+      "<u>${1:text}</u>$0"
+    ],
+    "description": "밑줄 텍스트 삽입"
   },
 }

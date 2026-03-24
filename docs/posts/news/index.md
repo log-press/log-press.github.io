@@ -92,7 +92,7 @@ const getNavButtonStyle = (isDisabled) => ({
 })
 </script>
 
-<h1 style="text-align: center; margin-top: 32px; margin-bottom: 24px; font-size: 2rem;">뉴스 스크랩</h1>
+<h1 style="text-align: center; margin-top: 32px; margin-bottom: 24px; font-size: 2rem;">News</h1>
 
 <p style="color: var(--vp-c-text-2); text-align: center; font-size: 1rem; margin-bottom: 60px; line-height: 1.6;">
   가정이 무너지고 사회가 무너지고
