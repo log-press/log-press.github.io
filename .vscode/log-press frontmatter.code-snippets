@@ -25,6 +25,7 @@
     "body": [
       "---",
       "title: $CURRENT_YEAR_SHORT$CURRENT_MONTH$CURRENT_DATE",
+      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
       "tags: [뉴스클리핑]",
       "---",
       "",
