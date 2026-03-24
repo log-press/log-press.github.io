@@ -7,7 +7,8 @@ tags: [만록, AI, AI로 쓴 글]
 ::: info
 제미나이를 활용해 생성한 글입니다.
 :::
-***
+
+<br>
 
 AI의 급격한 발전이 노동 시장과 인류의 미래에 미칠 영향을 두고 치열한 논쟁이 벌어지고 있다. 그 중심에서 대중의 뜨거운 관심을 받은 두 편의 글이 있다. 하나는 2026년 2월 9일 개인 블로그와 소셜미디어 엑스(X)를 통해 발행되어 폭발적인 조회수를 기록하며 논란을 점화한 맷 슈머(Matt Shumer)의 에세이 ["Something Big Is Happening"](https://shumer.dev/something-big-is-happening)이다. 다른 하나는 이에 대한 정면 반박으로, 2026년 2월 13일 뉴스레터 플랫폼 서브스택(Substack)에 올라온 데이비드 옥스(David Oks)의 에세이 ["Why I’m not worried about AI job loss"](https://davidoks.blog/p/why-im-not-worried-about-ai-job-loss)다. 두 글은 AI라는 동일한 기술 혁신을 두고 완전히 상반된 미래를 조망한다.
 
