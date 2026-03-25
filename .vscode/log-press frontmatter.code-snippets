@@ -14,11 +14,11 @@
     "description": "마크다운 YAML 프론트매터 템플릿"
   },
 
-  "Clean Markdown Link": {
+"Clean Markdown Link": {
     "prefix": "link",
-    "body": "[${1}](${2})",
+    "body": "[${1}](${2})$0",
     "description": "Insert a markdown link without https://"
-  },
+  }
   
   "News Clipping Template": {
     "prefix": "news",
