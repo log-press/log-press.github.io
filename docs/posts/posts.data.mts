@@ -26,7 +26,7 @@ export default createContentLoader('posts/**/*.md', {
           url: page.url,
           date: page.frontmatter.date,
           tags: page.frontmatter.tags || [], // 태그 데이터 추가 (없으면 빈 배열)
-          preview: cleanContent.length > 100 ? cleanContent.slice(0, 100) + '...' : cleanContent
+          preview: cleanContent.length > 140 ? cleanContent.slice(0, 140) + '...' : cleanContent
         }
       })
       // 2. 작성일 기준 최신순(내림차순)으로 다시 정렬합니다.

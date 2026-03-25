@@ -29,7 +29,7 @@ aside: false
   <h2 style="font-size: 1.4rem; text-align: center; border-bottom: 2px solid var(--vp-c-divider) !important; padding-bottom: 14px !important; margin-bottom: 24px !important;">
     Contact
   </h2>
-  <p style="text-align: center; font-size: 1.1rem; color: var(--vp-c-text-2); margin: 0;">
+  <p style="font-size: 1rem; text-align: center; color: var(--vp-c-text-2); margin: 0;">
     tmfcks0215@gmail.com
   </p>
 </div>

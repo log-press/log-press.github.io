@@ -20,7 +20,7 @@
     "description": "Insert a markdown link without https://"
   },
   
-  "News Scrap Template": {
+  "News Clipping Template": {
     "prefix": "news",
     "body": [
       "---",
@@ -43,7 +43,7 @@
   },
 
   "Line Break": {
-    "prefix": "line",
+    "prefix": "linebreak",
     "body": [
       "<br>"
     ]
@@ -54,7 +54,7 @@
     "body": [
       "<div style=\"text-align: center; margin: 40px 0;\">",
       "  <img src=\"../../public/${1:filename}.${2:extension}\" alt=\"${3:caption}\" width=\"${4:500}\" style=\"display: block; margin: 0 auto 12px;\">",
-      "  <span style=\"font-size: 0.9rem; color: var(--vp-c-text-2);\">▲ $3</span>",
+      "  <span style=\"font-size: 14px; color: var(--vp-c-text-2);\">▲ $3</span>",
       "</div>",
       "$0"
     ],

@@ -102,15 +102,15 @@ const getNavButtonStyle = (isDisabled) => ({
 
 <div v-for="post in paginatedPosts" :key="post.url" style="margin-top: 24px;">
   <a :href="post.url" style="display: block; text-decoration: none; cursor: pointer;">
-    <h2 style="border: none !important; margin-top: 8px !important; margin-bottom: 8px !important; padding: 0 !important; line-height: 1.2; font-size: 1.4rem; color: var(--vp-c-text-1); font-weight: 600;">
+    <h2 style="border: none !important; margin-top: 8px !important; margin-bottom: 8px !important; padding: 0 !important; line-height: 1.2; font-size: 1.4rem; font-weight: 600; color: var(--vp-c-text-1);">
       {{ post.title }}
     </h2>
     <div v-if="post.tags && post.tags.length" style="display: flex; gap: 8px; margin-bottom: 12px;">
-      <span v-for="tag in post.tags" :key="tag" style="font-size: 0.85rem; color: var(--vp-c-brand-1); font-weight: 500;">
+      <span v-for="tag in post.tags" :key="tag" style="font-size: 14px; font-weight: 500; color: var(--vp-c-brand-1);">
         #{{ tag }}
       </span>
     </div>
-    <p style="color: var(--vp-c-text-2); line-height: 1.6; font-size: 0.9rem; margin: 0;">
+    <p style="color: var(--vp-c-text-2); line-height: 1.6; font-size: 14px; margin: 0;">
       {{ post.preview }}
     </p>
   </a>

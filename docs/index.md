@@ -21,11 +21,11 @@ const scrollToRecent = () => {
   
   <h1 style="font-size: 2.4rem; font-weight: 700; margin-top: 24px;">Log-Press</h1>
   
-  <p style="font-size: 1.2rem; color: var(--vp-c-text-2); margin-top: 24px;">
+  <p style="font-size: 1rem; color: var(--vp-c-text-2); margin-top: 24px;">
     텍스트 아카이브
   </p>
 
-  <div class="scroll-down-btn" @click="scrollToRecent" style="color: var(--vp-c-text-2);">
+  <div class="scroll-down-btn" @click="scrollToRecent" style="color: var(--vp-c-text-2); cursor: pointer; margin-top: 24px;">
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="6 9 12 15 18 9"></polyline>
     </svg>
@@ -38,8 +38,8 @@ const scrollToRecent = () => {
   </h2>
 
   <div v-for="post in recentPosts" :key="post.url" style="margin-bottom: 12px; text-align: center;">
-    <h3 style="font-size: 1.1rem; margin: 0 !important; border: none !important; padding: 0 !important;">
-      <a :href="post.url" style="color: var(--vp-c-text-2); text-decoration: none; font-weight: normal;">
+    <h3 style="margin: 0 !important; border: none !important; padding: 0 !important;">
+      <a :href="post.url" style="font-size: 1.05rem; font-weight: normal; color: var(--vp-c-text-2); text-decoration: none;">
          {{ post.title }}
       </a>
     </h3>

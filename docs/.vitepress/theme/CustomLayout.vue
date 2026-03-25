@@ -25,13 +25,13 @@ const formatDate = (d) => {
           {{ frontmatter.title }}
         </h1>
         
-        <p style="color: var(--vp-c-text-2); margin: 0;">
+        <p style="font-size: 1rem; color: var(--vp-c-text-2); margin: 0;">
           {{ formatDate(frontmatter.date) }}
         </p>
 
         <div v-if="frontmatter.tags && frontmatter.tags.length" style="display: flex; justify-content: center; gap: 8px; margin-top: 24px;">
           <a v-for="tag in frontmatter.tags" :key="tag" :href="'/tags.html#' + tag"
-                style="background: var(--vp-c-bg-soft); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; color: var(--vp-c-brand-1); font-weight: 500; text-decoration: none; cursor: pointer;">
+                style="background: var(--vp-c-bg-soft); padding: 4px 12px; border-radius: 4px; font-size: 14px; font-weight: 500; color: var(--vp-c-brand-1); text-decoration: none; cursor: pointer;">
             #{{ tag }}
           </a>
         </div>

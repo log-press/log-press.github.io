@@ -1,38 +1,51 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 :root {
-  /* 라이트 모드: 브랜드 색상 검정 */
+  /* 글로벌 폰트 설정 */
+  --vp-font-family-base: 'Pretendard', sans-serif !important;
+
+  /* 라이트 모드 브랜드 색상 */
   --vp-c-brand-1: #000000;
   --vp-c-brand-2: #222222;
   --vp-c-brand-3: #444444;
   --vp-c-brand-soft: rgba(0, 0, 0, 0.05);
-  --vp-button-brand-text: #ffffff; /* 검정 버튼 위 흰색 글자 */
+  --vp-button-brand-text: #ffffff;
 }
 
 .dark {
-  /* 다크 모드: 브랜드 색상 흰색 */
+  /* 다크 모드 브랜드 색상 */
   --vp-c-brand-1: #ffffff;
   --vp-c-brand-2: #eeeeee;
   --vp-c-brand-3: #dddddd;
   --vp-c-brand-soft: rgba(255, 255, 255, 0.1);
-  --vp-button-brand-text: #000000; /* 흰색 버튼 위 검정 글자 */
+  --vp-button-brand-text: #000000;
 
-  /* 다크 모드: 배경색을 완전한 검은색 및 무채색 계열로 변경 */
-  --vp-c-bg: #000000;          /* 메인 본문 배경 */
-  --vp-c-bg-alt: #0a0a0a;      /* 상단 네비게이션, 사이드바 등 대체 배경 */
-  --vp-c-bg-elv: #141414;      /* 드롭다운, 모달 등 떠 있는 요소의 배경 */
+  /* 다크 모드 배경색 */
+  --vp-c-bg: #000000;
+  --vp-c-bg-alt: #0a0a0a;
+  --vp-c-bg-elv: #141414;
 }
 
-/* 본문 내 모든 헤더 위 구분선 제거 */
+/* 본문 타이포그래피 (두께 및 크기 보정) */
+.vp-doc p,
+.vp-doc li,
+.vp-doc blockquote {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+/* 헤더 상단 구분선 제거 */
 .vp-doc h2,
 .vp-doc h3,
 .vp-doc h4,
 .vp-doc h5,
 .vp-doc h6 {
   border-top: none !important;
-  margin-top: 2.4rem !important; /* 상단 여백이 너무 붙어 보일 경우 수치 조정 */
+  margin-top: 2.4rem !important;
   padding-top: 0 !important;
 }
 
-/* 마크다운 본문(단락, 리스트, 표, 인용구) 내의 텍스트 링크만 디자인 변경 */
+/* 본문 텍스트 링크 디자인 */
 .vp-doc p a,
 .vp-doc li a,
 .vp-doc table a,
@@ -50,7 +63,7 @@
   color: #33a06f !important;
 }
 
-/* 목차(aside)가 본문 중앙 정렬을 밀어내지 않도록 절대 위치로 강제 조정 (PC 화면 기준) */
+/* PC 화면 목차(aside) 절대 위치 고정 */
 @media (min-width: 1280px) {
   .VPDoc .container {
     position: relative !important;
@@ -60,8 +73,6 @@
   .VPDoc .aside {
     position: absolute !important;
     top: 0;
-    /* 본문 중앙을 기준으로 우측으로 380px 띄웁니다. 
-       본문과 목차 사이의 간격을 조절하려면 380px 수치를 변경하십시오. */
     left: calc(50% + 380px) !important; 
     width: 250px;
   }
