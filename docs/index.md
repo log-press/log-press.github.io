@@ -39,7 +39,7 @@ const scrollToRecent = () => {
 
   <div v-for="post in recentPosts" :key="post.url" style="margin-bottom: 12px; text-align: center;">
     <h3 style="margin: 0 !important; border: none !important; padding: 0 !important;">
-      <a :href="post.url" style="font-size: 1.05rem; font-weight: normal; color: var(--vp-c-text-2); text-decoration: none;">
+      <a :href="post.url" style="font-size: 1rem; font-weight: normal; color: var(--vp-c-text-2); text-decoration: none;">
          {{ post.title }}
       </a>
     </h3>

@@ -63,7 +63,7 @@ const formatDate = (dateString) => {
         {{ group.tag }}
       </h2>
       <div v-for="post in group.posts" :key="post.url" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px;">
-        <a :href="post.url" style="color: var(--vp-c-text-1); text-decoration: none; font-size: 1.05rem;">
+        <a :href="post.url" style="color: var(--vp-c-text-1); text-decoration: none; font-size: 1rem;">
           {{ post.title }}
         </a>
         <span style="color: var(--vp-c-text-2); font-size: 14px; margin-left: 16px; white-space: nowrap;">
