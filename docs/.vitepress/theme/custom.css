@@ -86,3 +86,12 @@
     margin: 0 auto !important;
   }
 }
+
+/* 본문 내 유튜브 iframe 반응형 자동 적용 */
+.vp-doc iframe[src*="youtube.com"],
+.vp-doc iframe[src*="youtu.be"] {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  max-width: 100%;
+}
