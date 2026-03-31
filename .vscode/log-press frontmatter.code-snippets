@@ -24,7 +24,7 @@
     "prefix": "news",
     "body": [
       "---",
-      "title: $CURRENT_YEAR_SHORT$CURRENT_MONTH$CURRENT_DATE",
+      "title: $CURRENT_YEAR_SHORT$CURRENT_MONTH$CURRENT_DATE 뉴스클리핑",
       "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
       "tags: [뉴스클리핑]",
       "---",
